@@ -1,7 +1,13 @@
 from django.shortcuts import render
+from core.forms import ComplaintForm
+from core.models import Complaint
 
 # Create your views here.
 
 
 def index(request):
-    return render(request, "index.html")
+    form = ComplaintForm()
+    context = {
+        "form": form,
+    }
+    return render(request, "index.html", context)
