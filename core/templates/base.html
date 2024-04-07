@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Django Primers</title>
+
+    <!-- Tailwind, Alpine, Htmx -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.10.2/dist/cdn.min.js" defer></script>
+    <script src="https://unpkg.com/htmx.org@1.7.0" defer></script>
+</head>
+<body>
+    <div class="container mt-4">
+        {% block content %}
+
+        {% endblock content %}
+    </div>
+</body>
+</html>
