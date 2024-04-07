@@ -7,6 +7,13 @@ from core.models import Complaint
 
 def index(request):
     form = ComplaintForm()
+    if request.method == "POST":
+        form = ComplaintForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return render(request, 'partials/success.html')
+        return render(request, 'partials/failure.html')
+    form = ComplaintForm()
     context = {
         "form": form,
     }
